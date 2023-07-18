@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(":up_java_lib")
+    implementation project(":java17")
     //implementation 'com.github.up-language:up-java-lib:2023.0717.2349'
     implementation 'org.junit.jupiter:junit-jupiter:5.9.1'
     implementation 'com.google.guava:guava:31.1-jre'
