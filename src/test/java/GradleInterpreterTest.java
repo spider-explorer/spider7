@@ -1,21 +1,16 @@
-package global;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
-import groovy.lang.GroovyShell;
 import groovy.util.Eval;
 
-class DummyTest {
+class GradleInterpreterTest {
 
 	@Test
 	void test() {
-		// https://docs.groovy-lang.org/latest/html/documentation/guide-integrating.html
+		//Integrating Groovy in a Java application
+		//https://docs.groovy-lang.org/latest/html/documentation/guide-integrating.html
 		System.out.println(Eval.me("33*3"));
 		System.out.println(Eval.me("'foo'.toUpperCase()"));
-		var shell = new GroovyShell();
-		System.out.println(shell.evaluate("3*5"));    
 	}
 
 }

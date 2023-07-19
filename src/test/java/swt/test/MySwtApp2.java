@@ -12,7 +12,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.List;
 
-public class MySwtApp {
+public class MySwtApp2 {
 	private static Text text;
 	private static List list;
 	private static Button btn1;

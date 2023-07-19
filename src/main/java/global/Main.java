@@ -86,5 +86,7 @@ public class Main {
 		assertEquals("{\"a\":\"abc\",\"b\":123,\"c\":[11,22,33]}", vm.jsToJson("json").toString());
 		vm.print(vm.asObject(json).get("c"));
 		vm.print(vm.js("$0.c[$1]", json, 1));
+		vm.newArray(1, 2, 3).get(1);
+		vm.newObject("a", 0).get("a");
 	}
 }
