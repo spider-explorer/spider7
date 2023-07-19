@@ -15,9 +15,11 @@ class GradleInterpreterTest {
 		System.out.println(Eval.me("33*3"));
 		System.out.println(Eval.me("'foo'.toUpperCase()"));
 		
-		var sharedData = new Binding();
-		sharedData.setProperty("vm", new global.VM8());
-		var shell = new GroovyShell(Thread.currentThread().getContextClassLoader(), sharedData);
+		//var sharedData = new groovy.lang.Binding();
+		//sharedData.setProperty("vm", new global.VM8());
+		//var shell = new GroovyShell(Thread.currentThread().getContextClassLoader(), sharedData);
+		var shell = new GroovyShell(Thread.currentThread().getContextClassLoader());
+		shell.setProperty("vm", new global.VM());
 		shell.evaluate("""
 				def vm2 = new global.VM8()
 				vm2.print(123.45D)
