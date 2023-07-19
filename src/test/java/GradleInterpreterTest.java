@@ -17,7 +17,7 @@ class GradleInterpreterTest {
 		
 		var sharedData = new Binding();
 		sharedData.setProperty("vm", new global.VM8());
-		var shell = new GroovyShell(GradleInterpreterTest.class.getClassLoader(), sharedData);
+		var shell = new GroovyShell(Thread.currentThread().getContextClassLoader(), sharedData);
 		shell.evaluate("""
 				def vm2 = new global.VM8()
 				vm2.print(123.45D)
